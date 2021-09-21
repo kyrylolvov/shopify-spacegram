@@ -1,5 +1,4 @@
 import { createReducerFunction, ImmerReducer } from "immer-reducer";
-import AxiosResponse from "axios";
 
 export interface Post {
   copyright: string;
