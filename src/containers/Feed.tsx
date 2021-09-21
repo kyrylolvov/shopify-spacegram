@@ -20,7 +20,7 @@ const Feed: React.FC = () => {
 
   useEffect(() => {
     dispatch(getPosts(body));
-  }, []);
+  }, [body]);
 
   return (
     <>
