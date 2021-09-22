@@ -81,8 +81,11 @@ const InfoSection = styled.div`
 `;
 
 const LikeIconWrapper = styled.div<{ likeButton: boolean }>`
-  animation: ${({ likeButton }) =>
-    likeButton ? "pop 0.3s linear 1" : "pop 0.3s linear 1"};
+  animation: ${({ likeButton }) => (likeButton ? "pop 0.3s linear 1" : "none")};
+
+  -webkit-tap-highlight-color: transparent;
+  background: transparent;
+  background-color: transparent;
 
   @keyframes pop {
     50% {
@@ -93,6 +96,9 @@ const LikeIconWrapper = styled.div<{ likeButton: boolean }>`
 
 const ShareIconWrapper = styled.div<{ color: string }>`
   color: ${({ color }) => (color ? color : color)};
+  -webkit-tap-highlight-color: transparent;
+  background: transparent;
+  background-color: transparent;
 `;
 
 const Icons = styled.div`
