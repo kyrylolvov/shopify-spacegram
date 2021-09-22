@@ -25,10 +25,12 @@ export default class MainProtected extends HttpClient {
   public getPosts = (body: PostsRequestBody) =>
     this.instance.get<Post[]>(
       `/apod?api_key=CJhRsc7Eowi4pPjo4xdbM0W8zeheqDnjjur5Qzln${
-        body.count ? `&count=${body.count}` : ""
+        body.count
+          ? `&count=${body.count}`
+          : `${body.start_date ? `&start_date=${body.start_date}` : ""}${
+              body.end_date ? `&start_date=${body.end_date}` : ""
+            }`
       }
-      ${body.start_date ? `&start_date=${body.start_date}` : ""}${
-        body.end_date ? `&start_date=${body.end_date}` : ""
-      }`
+      `
     );
 }

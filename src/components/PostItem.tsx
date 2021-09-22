@@ -23,7 +23,6 @@ const PostItem: React.FC<InputProps> = ({
   const [shareColor, toggleShareColor] = useState("#21272E");
   const [likeButton, toggleLikeButton] = useState(false);
 
-  console.log(showText);
   const copyToClipboard = function (url: string) {
     const copyText = url;
     navigator.clipboard.writeText(copyText);
@@ -52,7 +51,7 @@ const PostItem: React.FC<InputProps> = ({
           </ShareIconWrapper>
         </Icons>
         <PostTitle>
-          <span style={{ fontWeight: 500 }}>🚀🌌 nasa </span>"{title}"
+          <span style={{ fontWeight: 500 }}>🚀 nasa </span>"{title}"
         </PostTitle>
         <PostDescription showText={showText}>{description}</PostDescription>
         <ToggleShow onClick={() => toggleShowText(!showText)}>
@@ -65,7 +64,7 @@ const PostItem: React.FC<InputProps> = ({
 };
 
 const Wrapper = styled.div`
-  background-color: #fafafa;
+  background-color: #fff;
   border-radius: 10px;
   margin-bottom: 20px;
   border: solid 1px #e0e1e2;
