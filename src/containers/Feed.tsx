@@ -103,6 +103,7 @@ const InputWrapper = styled.input`
   border: none;
   margin-right: 10px;
   outline: none;
+  background-color: transparent:
 `;
 
 const IconWrapper = styled.div`
