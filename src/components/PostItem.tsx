@@ -84,6 +84,8 @@ const LikeIconWrapper = styled.div<{ likeButton: boolean }>`
   animation: ${({ likeButton }) =>
     likeButton ? "pop 0.3s linear 1" : "pop 0.3s linear 1"};
 
+  user-select: none;
+
   @keyframes pop {
     50% {
       transform: scale(1.2);
@@ -93,6 +95,7 @@ const LikeIconWrapper = styled.div<{ likeButton: boolean }>`
 
 const ShareIconWrapper = styled.div<{ color: string }>`
   color: ${({ color }) => (color ? color : color)};
+  user-select: none;
 `;
 
 const Icons = styled.div`
