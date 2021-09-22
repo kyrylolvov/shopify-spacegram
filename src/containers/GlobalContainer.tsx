@@ -10,7 +10,7 @@ const GlobalContainerStyled = styled.div`
   padding: 30px 50px;
   font-family: "Poppins", sans-serif;
 
-  @media (max-width: 425px) {
+  @media (max-width: 500px) {
     padding: 20px 15px;
   }
 `;
